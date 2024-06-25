@@ -1,4 +1,9 @@
-$primary-color: #47cfac;
+$primary-color: #9523CF;
+$secondary-color: #8037A5;
+$tertiary-color: #A700FA;
+$quaternary-color: #663D7A;
+$fifth-color: #473550;
+$sixth-color: #302B33;
 
 * { /* Se refiere a todos los elementos del html*/
     box-sizing: border-box; /*incluir padding y border en el cálculo del tamaño total del elemento.*/
@@ -8,4 +13,5 @@ $primary-color: #47cfac;
 
 html { /*se refiere al elemento raíz <html>*/
     font-size: 62.5%;  /*1rem equivalente a 10 píxeles (px)*/
+    
 }

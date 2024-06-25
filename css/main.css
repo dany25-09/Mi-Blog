@@ -25,20 +25,95 @@ a {
 
 header {
   width: 100%;
-  height: 140px;
+  height: 120px;
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 50px 70px;
+  border-bottom: 1px solid #302B33;
 }
 header .header__icons-container {
   width: 100%;
   height: 100%;
   display: grid;
-  background-color: #47cfac;
+  background-color: #9523CF;
 }
 header .header__icons-container .header__icons-container__icons {
   width: 300px;
   height: auto;
+  display: flex;
   justify-self: end;
   align-items: center;
   justify-content: space-around;
+}
+header .header__icons-container .header__icons-container__icons span {
+  color: white;
+}
+header .header__nav-container {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  align-items: center;
+  box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.1);
+}
+header .header__nav-container .header__nav-container__logo a img {
+  width: 150px;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header .header__nav-container .header__nav-container__profile-link {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+header .header__nav-container .header__nav-container__profile-link a {
+  color: #9523CF;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-bottom: 2px solid #9523CF;
+  cursor: pointer;
+}
+header .header__nav-container .header__nav-container__profile-link a:hover {
+  transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+main .main__principal-img-container {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/img/imagen-fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 110%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .main__principal-img-container h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 30px;
+  font-family: "Rubik", sans-serif;
+  font-weight: bolder;
+}
+main .main__principal-img-container button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1.5px solid white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  background-color: #9523CF;
+  color: white;
+  cursor: pointer;
+}
+main .main__principal-img-container button:hover {
+  background-color: #663D7A;
+  transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
 }/*# sourceMappingURL=main.css.map */

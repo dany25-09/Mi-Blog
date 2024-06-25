@@ -3,6 +3,7 @@
   box-sizing: border-box; /*incluir padding y border en el cálculo del tamaño total del elemento.*/
   padding: 0;
   margin: 0;
+  font-family: "Rubik", sans-serif;
 }
 
 html { /*se refiere al elemento raíz <html>*/

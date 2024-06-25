@@ -1,0 +1,10 @@
+@charset "UTF-8";
+* { /* Se refiere a todos los elementos del html*/
+  box-sizing: border-box; /*incluir padding y border en el cálculo del tamaño total del elemento.*/
+  padding: 0;
+  margin: 0;
+}
+
+html { /*se refiere al elemento raíz <html>*/
+  font-size: 62.5%; /*1rem equivalente a 10 píxeles (px)*/
+}/*# sourceMappingURL=variables.css.map */

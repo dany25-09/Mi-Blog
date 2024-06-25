@@ -1,0 +1,44 @@
+@charset "UTF-8";
+* { /* Se refiere a todos los elementos del html*/
+  box-sizing: border-box; /*incluir padding y border en el cálculo del tamaño total del elemento.*/
+  padding: 0;
+  margin: 0;
+}
+
+html { /*se refiere al elemento raíz <html>*/
+  font-size: 62.5%; /*1rem equivalente a 10 píxeles (px)*/
+}
+
+body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline;
+  color: black;
+}
+
+header {
+  width: 100%;
+  height: 140px;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+header .header__icons-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  background-color: #47cfac;
+}
+header .header__icons-container .header__icons-container__icons {
+  width: 300px;
+  height: auto;
+  justify-self: end;
+  align-items: center;
+  justify-content: space-around;
+}/*# sourceMappingURL=main.css.map */

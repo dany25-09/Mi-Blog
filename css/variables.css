@@ -8,4 +8,9 @@
 
 html { /*se refiere al elemento raíz <html>*/
   font-size: 62.5%; /*1rem equivalente a 10 píxeles (px)*/
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }/*# sourceMappingURL=variables.css.map */

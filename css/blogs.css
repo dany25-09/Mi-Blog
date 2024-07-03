@@ -151,6 +151,7 @@ main .main__ultimos-blogs .main__ultimos-blogs__container {
   margin-bottom: 70px;
   width: 90%;
   height: 800px;
+  max-width: 980px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -221,15 +222,15 @@ footer {
   height: auto;
 }
 footer .footer__text {
-  border-top: 20px solid #8037A5;
+  border-top: 35px solid #8037A5;
   width: 100%;
-  height: 60px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #663D7A;
 }
 footer .footer__text .footer__text__p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: white;
 }/*# sourceMappingURL=blogs.css.map */

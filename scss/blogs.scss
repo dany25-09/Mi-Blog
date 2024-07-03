@@ -1,10 +1,5 @@
 @import 'variables';
 
-a{
-    text-decoration: none;
-    color: black;
-}
-
 header{
     width: 100%;
     height: 120px;
@@ -75,6 +70,11 @@ header{
 }
 
 main{
+
+    // .grid__container{
+    //     max-width: 980px;
+    //     margin: auto;
+    // }
     /*sección noticias*/
     .main__noticias{
         width: 100%;
@@ -165,6 +165,7 @@ main{
             margin-bottom: 70px;
             width: 90%;
             height: 800px;
+            max-width: 980px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
@@ -251,16 +252,16 @@ footer{
     height: auto;
 
     .footer__text{
-        border-top: 20px solid $tertiary-color;
+        border-top: 35px solid $tertiary-color;
         width: 100%;
-        height: 60px;
+        height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: $quaternary-color;
 
         .footer__text__p{
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: $text-color;
         }
     }

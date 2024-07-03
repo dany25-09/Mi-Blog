@@ -29,7 +29,7 @@ header {
   height: 120px;
   display: grid;
   grid-template-rows: 50px 70px;
-  border-bottom: 1px solid #302B33;
+  border-bottom: 1px solid #473550;
 }
 header .header__icons-container {
   width: 100%;
@@ -47,6 +47,9 @@ header .header__icons-container .header__icons-container__icons {
 }
 header .header__icons-container .header__icons-container__icons span {
   color: white;
+}
+header .header__icons-container .header__icons-container__icons span:hover {
+  color: #473550;
 }
 header .header__nav-container {
   background-color: white;
@@ -76,7 +79,7 @@ header .header__nav-container .header__nav-container__profile-link a {
   cursor: pointer;
 }
 header .header__nav-container .header__nav-container__profile-link a:hover {
-  transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
+  transform: scale(1.05);
 }
 
 main {

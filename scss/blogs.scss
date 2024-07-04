@@ -60,7 +60,8 @@ header{
                 font-size: 1.5rem;
                 font-weight: 700;
                 border-bottom: 2px solid $primary-color;
-                cursor: pointer;
+                display: inline-block; // para que la transformación funcione
+                transition: transform 0.3s;
                 &:hover{
                     transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
                 }
@@ -140,6 +141,8 @@ main{
                     background-color: $secondary-color;
                     color: $text-color;
                     cursor: pointer;
+                    display: inline-block; // para que la transformación funcione
+                    transition: transform 0.3s;
                     &:hover{
                         background-color: $quaternary-color; 
                         transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
@@ -172,6 +175,8 @@ main{
             gap: 30px;
 
             .main__ultimos-blogs__container__blog{
+                max-width: 320px;
+                max-height: 400px;
                 background-color: $primary-color;
                 border-radius: 10px;
                 box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);

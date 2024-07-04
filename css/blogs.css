@@ -67,7 +67,8 @@ header .header__nav-container .header__nav-container__profile-link a {
   font-size: 1.5rem;
   font-weight: 700;
   border-bottom: 2px solid #9523CF;
-  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s;
 }
 header .header__nav-container .header__nav-container__profile-link a:hover {
   transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
@@ -134,6 +135,8 @@ main .main__noticias .main__noticias__info .main__noticias__info__text .main__no
   background-color: #A700FA;
   color: white;
   cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s;
 }
 main .main__noticias .main__noticias__info .main__noticias__info__text .main__noticias__info__text__a:hover {
   background-color: #663D7A;
@@ -158,6 +161,8 @@ main .main__ultimos-blogs .main__ultimos-blogs__container {
   gap: 30px;
 }
 main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog {
+  max-width: 320px;
+  max-height: 400px;
   background-color: #9523CF;
   border-radius: 10px;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);

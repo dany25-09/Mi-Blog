@@ -85,14 +85,14 @@ main {
 }
 main .main__about-me {
   width: 100%;
-  height: 370px;
+  height: aut;
   background-color: #dfe3e9;
   box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
 }
 main .main__about-me .main__about-me__info {
   display: grid;
-  grid-template-columns: 550px 550px;
-  grid-template-rows: 300px;
+  grid-template-columns: repeat(2, minmax(200px, 550px));
+  grid-auto-rows: 300px;
   padding: 20px 50px;
   gap: 30px;
   justify-content: center;
@@ -105,7 +105,7 @@ main .main__about-me .main__about-me__info .main__about-me__info__img .main__abo
 }
 main .main__about-me .main__about-me__info .main__about-me__info__img .main__about-me__info__img__container img {
   justify-self: center;
-  width: 40%;
+  height: 300px;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;
@@ -169,9 +169,11 @@ main .main__contact-main-container {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 515px));
   grid-template-rows: 1fr;
   background-color: #9523CF;
+  justify-content: center;
   padding: 40px 50px 40px;
 }
 main .main__contact-main-container .main__contact-main-container__left, main .main__contact-main-container .main__contact-main-container__right {
@@ -188,6 +190,7 @@ main .main__contact-main-container .main__contact-main-container__left img, main
 main .main__contact-main-container .main__contact-main-container__left div a, main .main__contact-main-container .main__contact-main-container__right div a {
   font-size: 1.5rem;
   color: white;
+  margin-top: 10px;
   border-bottom: 1.5px solid white;
   display: inline-block;
   transition: transform 0.3s;

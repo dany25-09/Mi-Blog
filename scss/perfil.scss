@@ -79,14 +79,14 @@ main{
     /*sección sobre mi*/
     .main__about-me{
         width: 100%;
-        height: 370px;
+        height: aut;
         background-color: #dfe3e9;
         box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
 
         .main__about-me__info{
             display: grid;
-            grid-template-columns: 550px 550px;
-            grid-template-rows: 300px;
+            grid-template-columns: repeat(2, minmax(200px, 550px));
+            grid-auto-rows: 300px;
             padding: 20px 50px;
             gap: 30px;
             justify-content: center;
@@ -100,7 +100,7 @@ main{
                     height: 100%;
                     img{
                         justify-self: center;
-                        width: 40%;
+                        height: 300px;
                         object-fit: contain;
                         object-position: center;
                         border-radius: 10px;
@@ -178,9 +178,11 @@ main{
         width: 100%;
         height: auto;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 515px));
         grid-template-rows: 1fr;
         background-color: $primary-color;
+        justify-content: center;
         padding: 40px 50px 40px;
 
         .main__contact-main-container__left{
@@ -201,6 +203,7 @@ main{
                 a{
                     font-size: 1.5rem;
                     color: $text-color;
+                    margin-top: 10px;
                     border-bottom: 1.5px solid $text-color;
                     display: inline-block; // para que la transformación funcione
                     transition: transform 0.3s;

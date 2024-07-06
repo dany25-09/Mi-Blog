@@ -113,10 +113,12 @@ main .main__contact-main-container {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 515px));
   grid-template-rows: 1fr;
   background-color: #9523CF;
-  padding: 40px 50px 40px;
+  justify-content: center;
+  padding: 40px 30px 40px;
 }
 main .main__contact-main-container .main__contact-main-container__left, main .main__contact-main-container .main__contact-main-container__right {
   display: flex;
@@ -132,6 +134,7 @@ main .main__contact-main-container .main__contact-main-container__left img, main
 main .main__contact-main-container .main__contact-main-container__left div a, main .main__contact-main-container .main__contact-main-container__right div a {
   font-size: 1.5rem;
   color: white;
+  margin-top: 10px;
   border-bottom: 1.5px solid white;
   display: inline-block;
   transition: transform 0.3s;

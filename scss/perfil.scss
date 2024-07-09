@@ -154,7 +154,7 @@ main{
             .main__proyectos__container__articulo{
                 background-color: $primary-color;
                 max-width: 350px;
-                max-height: 200px;
+                max-height: 250px;
                 border-radius: 5px;
                 padding: 15px 15px;
 
@@ -166,7 +166,8 @@ main{
 
                 p{
                     color: $text-color;
-                    font-size: 1.1rem;
+                    line-height: 15px;
+                    font-size: 1.3rem;
                     
                 }
             }

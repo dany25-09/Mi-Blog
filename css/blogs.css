@@ -103,7 +103,7 @@ main .main__noticias .main__noticias__info {
 main .main__noticias .main__noticias__info .main__noticias__info__img .main__noticias__info__img__container {
   width: 100%;
   height: 100%;
-  background-image: url("/assets/img/main-news-img.png");
+  background-image: url("../assets/img/main-news-img.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -175,7 +175,7 @@ main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__
 main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--sixth, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--fifth, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--quaternary, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--tertiary, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--secondary {
   width: 100%;
   height: 50%;
-  background-image: url("/assets/img/post-1.png");
+  background-image: url("../assets/img/post-1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -211,19 +211,19 @@ main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__
   transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
 }
 main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--secondary {
-  background-image: url("/assets/img/post-2.png");
+  background-image: url("../assets/img/post-2.png");
 }
 main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--tertiary {
-  background-image: url("/assets/img/post-3.png");
+  background-image: url("../assets/img/post-3.png");
 }
 main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--quaternary {
-  background-image: url("/assets/img/post-3.png");
+  background-image: url("../assets/img/post-3.png");
 }
 main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--fifth {
-  background-image: url("/assets/img/post-1.png");
+  background-image: url("../assets/img/post-1.png");
 }
 main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--sixth {
-  background-image: url("/assets/img/post-3.png");
+  background-image: url("../assets/img/post-3.png");
 }
 
 footer {

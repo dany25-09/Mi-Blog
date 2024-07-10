@@ -134,6 +134,7 @@ main{
     /*proyectos*/
     .main__proyectos{
         margin-bottom: 50px;
+        height: auto;
         h2{
             font-size: 2rem;
             font-weight: 700;
@@ -154,7 +155,8 @@ main{
             .main__proyectos__container__articulo{
                 background-color: $primary-color;
                 max-width: 350px;
-                max-height: 250px;
+                min-width: 280px;
+                height: 280px;
                 border-radius: 5px;
                 padding: 15px 15px;
 

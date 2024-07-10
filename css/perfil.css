@@ -132,6 +132,7 @@ main .main__about-me .main__about-me__info .main__about-me__info__text .main__ab
 }
 main .main__proyectos {
   margin-bottom: 50px;
+  height: auto;
 }
 main .main__proyectos h2 {
   font-size: 2rem;
@@ -152,7 +153,8 @@ main .main__proyectos .main__proyectos__container {
 main .main__proyectos .main__proyectos__container .main__proyectos__container__articulo {
   background-color: #9523CF;
   max-width: 350px;
-  max-height: 250px;
+  min-width: 280px;
+  height: 280px;
   border-radius: 5px;
   padding: 15px 15px;
 }

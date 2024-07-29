@@ -20,20 +20,21 @@ a {
   color: black;
 }
 
-header {
+.header {
   width: 100%;
   height: 120px;
   display: grid;
   grid-template-rows: 50px 70px;
   border-bottom: 1px solid #473550;
 }
-header .header__icons-container {
+
+.header__icons {
   width: 100%;
   height: 100%;
   display: grid;
   background-color: #9523CF;
 }
-header .header__icons-container .header__icons-container__icons {
+.header__icons .header__listIcons {
   width: 300px;
   height: auto;
   display: flex;
@@ -41,32 +42,33 @@ header .header__icons-container .header__icons-container__icons {
   align-items: center;
   justify-content: space-around;
 }
-header .header__icons-container .header__icons-container__icons span {
+.header__icons .header__listIcons .icon {
   color: white;
 }
-header .header__icons-container .header__icons-container__icons span:hover {
+.header__icons .header__listIcons .icon:hover {
   color: #473550;
 }
-header .header__nav-container {
+
+.header__nav {
   background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100%;
   align-items: center;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.1);
 }
-header .header__nav-container .header__nav-container__logo a img {
+.header__nav .header__logo .logo .logo__image {
   width: 150px;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-header .header__nav-container .header__nav-container__profile-link {
+.header__nav .header__profileLink {
   display: flex;
   justify-content: flex-end;
   margin-right: 50px;
 }
-header .header__nav-container .header__nav-container__profile-link a {
+.header__nav .header__profileLink .header__linkProfile {
   color: #9523CF;
   font-family: "Rubik", sans-serif;
   font-size: 1.5rem;
@@ -74,22 +76,20 @@ header .header__nav-container .header__nav-container__profile-link a {
   border-bottom: 2px solid #9523CF;
   cursor: pointer;
 }
-header .header__nav-container .header__nav-container__profile-link a:hover {
-  transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
+.header__nav .header__profileLink .header__linkProfile:hover {
+  transform: scale(1.05);
 }
 
-main {
+.main {
   /*sección sobre mi*/
-  /*proyectos*/
-  /*contacto*/
 }
-main .main__about-me {
+.main__aboutMe {
   width: 100%;
   height: aut;
   background-color: #dfe3e9;
   box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
 }
-main .main__about-me .main__about-me__info {
+.main__aboutMe .aboutMe__info {
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 550px));
   grid-auto-rows: 300px;
@@ -98,12 +98,12 @@ main .main__about-me .main__about-me__info {
   justify-content: center;
   align-items: center;
 }
-main .main__about-me .main__about-me__info .main__about-me__info__img .main__about-me__info__img__container {
+.main__aboutMe .aboutMe__info .aboutMe__img .aboutMe__imgContainer {
   display: grid;
   width: 100%;
   height: 100%;
 }
-main .main__about-me .main__about-me__info .main__about-me__info__img .main__about-me__info__img__container img {
+.main__aboutMe .aboutMe__info .aboutMe__img .aboutMe__imgContainer .imgContainer__img {
   justify-self: center;
   height: 300px;
   -o-object-fit: contain;
@@ -112,36 +112,40 @@ main .main__about-me .main__about-me__info .main__about-me__info__img .main__abo
      object-position: center;
   border-radius: 10px;
 }
-main .main__about-me .main__about-me__info .main__about-me__info__text {
+.main__aboutMe .aboutMe__info .aboutMe__text {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
 }
-main .main__about-me .main__about-me__info .main__about-me__info__text h1 {
+.main__aboutMe .aboutMe__info .aboutMe__text .aboutMe__title {
   font-size: 2.5rem;
   font-weight: 700;
   color: #9523CF;
   margin-bottom: 20px;
 }
-main .main__about-me .main__about-me__info .main__about-me__info__text .main__about-me__info__text__p {
+.main__aboutMe .aboutMe__info .aboutMe__text .aboutMe__paragraph {
   font-size: 1.3rem;
   font-weight: 600;
   color: #9523CF;
   margin-bottom: 30px;
 }
-main .main__proyectos {
+
+.main {
+  /*proyectos*/
+}
+.main__projects {
   margin-bottom: 50px;
   height: auto;
 }
-main .main__proyectos h2 {
+.main__projects .projects__title {
   font-size: 2rem;
   font-weight: 700;
   color: #9523CF;
   text-align: center;
   margin: 40px 0px;
 }
-main .main__proyectos .main__proyectos__container {
+.main__projects .projects__articles {
   padding: 0 50px 0;
   display: flex;
   flex-wrap: wrap;
@@ -150,7 +154,7 @@ main .main__proyectos .main__proyectos__container {
   justify-content: center;
   gap: 20px;
 }
-main .main__proyectos .main__proyectos__container .main__proyectos__container__articulo {
+.main__projects .projects__articles .article {
   background-color: #9523CF;
   max-width: 350px;
   min-width: 280px;
@@ -158,17 +162,21 @@ main .main__proyectos .main__proyectos__container .main__proyectos__container__a
   border-radius: 5px;
   padding: 15px 15px;
 }
-main .main__proyectos .main__proyectos__container .main__proyectos__container__articulo h3 {
+.main__projects .projects__articles .article .article__text {
   color: white;
   font-size: 1.7rem;
   margin-bottom: 10px;
 }
-main .main__proyectos .main__proyectos__container .main__proyectos__container__articulo p {
+.main__projects .projects__articles .article .article__info {
   color: white;
   line-height: 15px;
   font-size: 1.3rem;
 }
-main .main__contact-main-container {
+
+.main {
+  /*contacto*/
+}
+.main__contact {
   width: 100%;
   height: auto;
   display: grid;
@@ -179,18 +187,18 @@ main .main__contact-main-container {
   justify-content: center;
   padding: 40px 50px 40px;
 }
-main .main__contact-main-container .main__contact-main-container__left, main .main__contact-main-container .main__contact-main-container__right {
+.main__contact .contact__message, .main__contact .contact__social {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
 }
-main .main__contact-main-container .main__contact-main-container__left img, main .main__contact-main-container .main__contact-main-container__right img {
+.main__contact .contact__message .contact__img, .main__contact .contact__social .contact__img {
   width: 80px;
   height: 80px;
   margin-right: 10px;
 }
-main .main__contact-main-container .main__contact-main-container__left div a, main .main__contact-main-container .main__contact-main-container__right div a {
+.main__contact .contact__message .contact__text .profileLink, .main__contact .contact__social .contact__text .profileLink {
   font-size: 1.5rem;
   color: white;
   margin-top: 10px;
@@ -198,19 +206,19 @@ main .main__contact-main-container .main__contact-main-container__left div a, ma
   display: inline-block;
   transition: transform 0.3s;
 }
-main .main__contact-main-container .main__contact-main-container__left div a:hover, main .main__contact-main-container .main__contact-main-container__right div a:hover {
+.main__contact .contact__message .contact__text .profileLink:hover, .main__contact .contact__social .contact__text .profileLink:hover {
   transform: scale(1.2);
 }
-main .main__contact-main-container .main__contact-main-container__left div p, main .main__contact-main-container .main__contact-main-container__right div p {
+.main__contact .contact__message .contact__text .contact__paragraph, .main__contact .contact__social .contact__text .contact__paragraph {
   font-size: 1.3rem;
   margin: 10px 0;
   color: white;
 }
-footer {
+.footer {
   width: 100%;
   height: auto;
 }
-footer .footer__text {
+.footer__text {
   border-top: 35px solid #8037A5;
   width: 100%;
   height: 80px;
@@ -219,7 +227,7 @@ footer .footer__text {
   align-items: center;
   background-color: #663D7A;
 }
-footer .footer__text .footer__text__p {
+.footer__text .footer__paragraph {
   font-size: 1.3rem;
   color: white;
 }/*# sourceMappingURL=perfil.css.map */

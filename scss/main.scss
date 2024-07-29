@@ -12,21 +12,22 @@ a{
     display: inline;
 }
 
-
-header{
+.header{
     width: 100%;
     height: 120px;
     display: grid;
     grid-template-rows: 50px 70px;
     border-bottom: 1px solid $fifth-color;
+}
 
-    .header__icons-container{
+.header{
+    &__icons{
         width: 100%;
         height: 100%;
         display: grid;
         background-color: $primary-color;
 
-        .header__icons-container__icons{
+        .header__listIcons{
             width: 300px;
             height: auto;
             display: flex;
@@ -34,7 +35,7 @@ header{
             align-items: center;
             justify-content: space-around;
 
-            span{
+            .icon{
                 color: $text-color;
                 &:hover{
                     color: $fifth-color;
@@ -42,8 +43,10 @@ header{
             }
         }
     }
+}
 
-    .header__nav-container{
+.header{
+    &__nav{
         background-color: $text-color;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -52,9 +55,9 @@ header{
         box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.1);
 
 
-        .header__nav-container__logo{
-            a{
-                img{
+        .header__logo{
+            .logo{
+                .logo__image{
                     width: 150px;
                     height: 100%;
                     object-fit: contain;
@@ -62,12 +65,12 @@ header{
             }
         }
 
-        .header__nav-container__profile-link{
+        .header__profileLink{
             display: flex;
             justify-content: flex-end;
             margin-right: 50px;
 
-            a{
+            .header__linkProfile{
                 color: $primary-color;
                 font-family: "Rubik", sans-serif;
                 font-size: 1.5rem;
@@ -82,10 +85,10 @@ header{
     }
 }
 
-main{
+.main{
     width: 100%;
     height: 100%;
-    .main__principal-img-container{
+    &__principalImg{
         width: 100%;
         height: 100%;
         background-image: url("../assets/img/imagen-fondo.jpg");
@@ -97,7 +100,7 @@ main{
         justify-content: center;
         align-items: center;
 
-        h1{
+        .main__title{
             font-size: 3rem;
             color: $text-color;
             padding: 0 50px 0;
@@ -107,7 +110,7 @@ main{
             text-align: center;
         }
 
-        a{
+        .main__blogLink{
             width: 110px;
             height: 50px;
             padding: 15px;

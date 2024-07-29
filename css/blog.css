@@ -20,20 +20,21 @@ a {
   color: black;
 }
 
-header {
+.header {
   width: 100%;
   height: 120px;
   display: grid;
   grid-template-rows: 50px 70px;
   border-bottom: 1px solid #473550;
 }
-header .header__icons-container {
+
+.header__icons {
   width: 100%;
   height: 100%;
   display: grid;
   background-color: #9523CF;
 }
-header .header__icons-container .header__icons-container__icons {
+.header__icons .header__listIcons {
   width: 300px;
   height: auto;
   display: flex;
@@ -41,13 +42,14 @@ header .header__icons-container .header__icons-container__icons {
   align-items: center;
   justify-content: space-around;
 }
-header .header__icons-container .header__icons-container__icons span {
+.header__icons .header__listIcons .icon {
   color: white;
 }
-header .header__icons-container .header__icons-container__icons span:hover {
+.header__icons .header__listIcons .icon:hover {
   color: #473550;
 }
-header .header__nav-container {
+
+.header__nav {
   background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -55,18 +57,18 @@ header .header__nav-container {
   align-items: center;
   box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.1);
 }
-header .header__nav-container .header__nav-container__logo a img {
+.header__nav .header__logo .logo .logo__image {
   width: 150px;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-header .header__nav-container .header__nav-container__profile-link {
+.header__nav .header__profileLink {
   display: flex;
   justify-content: flex-end;
   margin-right: 50px;
 }
-header .header__nav-container .header__nav-container__profile-link a {
+.header__nav .header__profileLink .header__linkProfile {
   color: #9523CF;
   font-family: "Rubik", sans-serif;
   font-size: 1.5rem;
@@ -74,42 +76,48 @@ header .header__nav-container .header__nav-container__profile-link a {
   border-bottom: 2px solid #9523CF;
   cursor: pointer;
 }
-header .header__nav-container .header__nav-container__profile-link a:hover {
-  transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
+.header__nav .header__profileLink .header__linkProfile:hover {
+  transform: scale(1.05);
 }
 
-main {
+.main {
   /*Imagen*/
-  /*parrafo del blog*/
-  /*contacto*/
 }
-main .main__blogpost-img-container {
+.main__imgContainer {
   padding: 40px 50px 40px;
   background-color: #9523CF;
 }
-main .main__blogpost-img-container img {
+.main__imgContainer .imgContainer__img {
   width: 100%;
 }
-main .main__blogpost-main-container {
+
+.main {
+  /*parrafo del blog*/
+}
+.main__blogpost {
   padding: 0 50px 40px;
 }
-main .main__blogpost-main-container h3 {
+.main__blogpost .blogpost__content .blogpost__h3 {
   color: #9523CF;
   font-size: 2rem;
   border-bottom: 1px solid #9523CF;
   margin: 20px 0;
 }
-main .main__blogpost-main-container h1 {
+.main__blogpost .blogpost__content .blogpost__article .blogpost__title {
   color: #9523CF;
   font-size: 4rem;
   margin-bottom: 20px;
 }
-main .main__blogpost-main-container p {
+.main__blogpost .blogpost__content .blogpost__article .blogpost__paragraph {
   color: #473550;
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
-main .main__contact-main-container {
+
+.main {
+  /*contacto*/
+}
+.main__contact {
   width: 100%;
   height: auto;
   display: grid;
@@ -118,20 +126,20 @@ main .main__contact-main-container {
   grid-template-rows: 1fr;
   background-color: #9523CF;
   justify-content: center;
-  padding: 40px 30px 40px;
+  padding: 40px 50px 40px;
 }
-main .main__contact-main-container .main__contact-main-container__left, main .main__contact-main-container .main__contact-main-container__right {
+.main__contact .contact__message, .main__contact .contact__social {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
 }
-main .main__contact-main-container .main__contact-main-container__left img, main .main__contact-main-container .main__contact-main-container__right img {
+.main__contact .contact__message .contact__img, .main__contact .contact__social .contact__img {
   width: 80px;
   height: 80px;
   margin-right: 10px;
 }
-main .main__contact-main-container .main__contact-main-container__left div a, main .main__contact-main-container .main__contact-main-container__right div a {
+.main__contact .contact__message .contact__text .profileLink, .main__contact .contact__social .contact__text .profileLink {
   font-size: 1.5rem;
   color: white;
   margin-top: 10px;
@@ -139,19 +147,19 @@ main .main__contact-main-container .main__contact-main-container__left div a, ma
   display: inline-block;
   transition: transform 0.3s;
 }
-main .main__contact-main-container .main__contact-main-container__left div a:hover, main .main__contact-main-container .main__contact-main-container__right div a:hover {
+.main__contact .contact__message .contact__text .profileLink:hover, .main__contact .contact__social .contact__text .profileLink:hover {
   transform: scale(1.2);
 }
-main .main__contact-main-container .main__contact-main-container__left div p, main .main__contact-main-container .main__contact-main-container__right div p {
+.main__contact .contact__message .contact__text .contact__paragraph, .main__contact .contact__social .contact__text .contact__paragraph {
   font-size: 1.3rem;
   margin: 10px 0;
   color: white;
 }
-footer {
+.footer {
   width: 100%;
   height: auto;
 }
-footer .footer__text {
+.footer__text {
   border-top: 35px solid #8037A5;
   width: 100%;
   height: 80px;
@@ -160,7 +168,7 @@ footer .footer__text {
   align-items: center;
   background-color: #663D7A;
 }
-footer .footer__text .footer__text__p {
+.footer__text .footer__paragraph {
   font-size: 1.3rem;
   color: white;
 }/*# sourceMappingURL=blog.css.map */

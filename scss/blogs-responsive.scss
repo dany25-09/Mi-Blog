@@ -1,16 +1,16 @@
-main{
-    .main__noticias{
-        .main__noticias__info{
+.main{
+    &__news{
+        .news__article{
             grid-template-columns: 1fr;
             grid-auto-rows: minmax(250px, 250px);
 
-            .main__noticias__info__img{
+            .article__infoImg{
                 
-                .main__noticias__info__img__container{
+                .infoImg__container{
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    img{
+                    .infoImg__image{
                         width: 65%;
                         min-width: 270px;
                     }
@@ -19,9 +19,11 @@ main{
 
         }
     }
-    
-    .main__ultimos-blogs{
-        .main__ultimos-blogs__container{
+}
+
+.main{
+    &__latestBlogs{
+        .latestBlogs__container{
             // display: flex;
             flex-wrap: nowrap;
             flex-direction: row;
@@ -32,7 +34,7 @@ main{
             scroll-snap-type: x proximity;
             scroll-snap-align: center;
             
-            .main__ultimos-blogs__container__blog{
+            .article{
                 scroll-snap-align: center;
             }
         }

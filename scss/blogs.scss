@@ -1,19 +1,21 @@
 @import 'variables';
 
-header{
+.header{
     width: 100%;
     height: 120px;
     display: grid;
     grid-template-rows: 50px 70px;
     border-bottom: 1px solid $fifth-color;
+}
 
-    .header__icons-container{
+.header{
+    &__icons{
         width: 100%;
         height: 100%;
         display: grid;
         background-color: $primary-color;
 
-        .header__icons-container__icons{
+        .header__listIcons{
             width: 300px;
             height: auto;
             display: flex;
@@ -21,7 +23,7 @@ header{
             align-items: center;
             justify-content: space-around;
 
-            span{
+            .icon{
                 color: $text-color;
                 &:hover{
                     color: $fifth-color;
@@ -29,8 +31,10 @@ header{
             }
         }
     }
+}
 
-    .header__nav-container{
+.header{
+    &__nav{
         background-color: $text-color;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -39,9 +43,9 @@ header{
         box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.1);
 
 
-        .header__nav-container__logo{
-            a{
-                img{
+        .header__logo{
+            .logo{
+                .logo__image{
                     width: 150px;
                     height: 100%;
                     object-fit: contain;
@@ -49,37 +53,36 @@ header{
             }
         }
 
-        .header__nav-container__profile-link{
+        .header__profileLink{
             display: flex;
             justify-content: flex-end;
             margin-right: 50px;
 
-            a{
+            .header__linkProfile{
                 color: $primary-color;
                 font-family: "Rubik", sans-serif;
                 font-size: 1.5rem;
                 font-weight: 700;
                 border-bottom: 2px solid $primary-color;
-                display: inline-block; // para que la transformación funcione
-                transition: transform 0.3s;
+                cursor: pointer;
                 &:hover{
-                    transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
+                    transform: scale(1.05);
                 }
-            }  
+            }            
         }
     }
 }
 
-main{
+.main{
     /*sección noticias*/
-    .main__noticias{
+    &__news{
         width: 100%;
         height: auto;
         padding-bottom: 10px;
         background-color: $fifth-color;
         box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
 
-        .main__noticias__h2{
+        .news__title{
             display: inline-block;
             font-size: 2rem;
             font-weight: 500;
@@ -88,8 +91,7 @@ main{
             
         }
 
-        .main__noticias__info{
-            // background-color: aqua;
+        .news__article{
             display: grid;
             padding: 0 40px;    
             grid-template-columns: repeat(2, minmax(300px, 500px));
@@ -97,37 +99,37 @@ main{
             gap: 30px;
             justify-content: center;
 
-            .main__noticias__info__img{
-                .main__noticias__info__img__container{
+            .article__infoImg{
+                .infoImg__container{
                     width: 100%;
                     height: 100%;
 
-                    img{
+                    .infoImg__image{
                         width: 90%;
                         border-radius: 10px;
                     }
                 }
             }
 
-            .main__noticias__info__text{
+            .article__infoText{
                 display: flex;
                 flex-direction: column;
                 align-items: start;
                 justify-content: start;
 
-                h1{
+                .article__title{
                     font-size: 2rem;
                     color: $text-color;
                     margin-bottom: 20px;
                 }
 
-                .main__noticias__info__text__p{
+                .article__paragraph{
                     font-size: 1.3rem;
                     color: $text-color;
                     margin-bottom: 30px;
                 }
 
-                .main__noticias__info__text__a{
+                .blogProfile{
                     width: 90px;
                     height: 35px;
                     padding: 10px;
@@ -149,10 +151,12 @@ main{
             }
         }
     }
+}
 
+.main{
 /*Últimos blogposts*/
-    .main__ultimos-blogs{
-        .main__ultimos-blogs__h2{
+    &__latestBlogs{
+        .latestBlogs__title{
             font-size: 2rem;
             font-weight: 700;
             color: $primary-color;
@@ -161,7 +165,7 @@ main{
             // border-bottom: 1px solid $quaternary-color;
         }
 
-        .main__ultimos-blogs__container{
+        .latestBlogs__container{
             margin: 0 auto;
             margin-bottom: 70px;
             width: 80%;
@@ -172,7 +176,7 @@ main{
             align-items: center;
             gap: 30px;
 
-            .main__ultimos-blogs__container__blog{
+            .article{
                 min-width: 280px; /*para que funcione el overflow-x*/
                 width: 280px;
                 height: 380px;
@@ -181,29 +185,29 @@ main{
                 border-radius: 10px;
                 box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
 
-                .main__ultimos-blogs__container__blog__img{
+                .article__imgContainer--first{
                     width: 100%;
                     height: 45%;
 
-                    img{
+                    .article__img{
                         width: 100%;
                         height: 100%;
                         border-radius: 10px;
                     }
                 }
 
-                .main__ultimos-blogs__container__blog__h2{
+                .article__title{
                     color: $text-color;
                     margin: 20px 10px;
                     font-size: 1.8rem;
                 }
-                .main__ultimos-blogs__container__blog__p{
+                .article__paragraph{
                     color: $text-color;
                     font-size: 1.2rem;
                     margin: 0px 10px;
                     margin-bottom: 30px;
                 }
-                .main__ultimos-blogs__container__blog__a{
+                .blogProfile{
                     width: 90px;
                     height: 35px;
                     padding: 10px;
@@ -223,36 +227,35 @@ main{
                 }
 
                 /*Otras imagenes*/
-                .main__ultimos-blogs__container__blog__img--secondary{
-                    @extend .main__ultimos-blogs__container__blog__img;
+                .article__imgContainer--second{
+                    @extend .article__imgContainer--first;
                 }
 
-                .main__ultimos-blogs__container__blog__img--tertiary{
-                    @extend .main__ultimos-blogs__container__blog__img;
+                .article__imgContainer--third{
+                    @extend .article__imgContainer--first;
                 }
 
-                .main__ultimos-blogs__container__blog__img--quaternary{
-                    @extend .main__ultimos-blogs__container__blog__img;
+                .article__imgContainer--fourth{
+                    @extend .article__imgContainer--first;
                 }
 
-                .main__ultimos-blogs__container__blog__img--fifth{
-                    @extend .main__ultimos-blogs__container__blog__img;
+                .article__imgContainer--fifth{
+                    @extend .article__imgContainer--first;
                 }
 
-                .main__ultimos-blogs__container__blog__img--sixth{
-                    @extend .main__ultimos-blogs__container__blog__img;
+                .article__imgContainer--sixth{
+                    @extend .article__imgContainer--first;
                 }    
             }
         }
     }
 }
 
-
-footer{
+.footer{
     width: 100%;
     height: auto;
 
-    .footer__text{
+    &__text{
         border-top: 35px solid $tertiary-color;
         width: 100%;
         height: 80px;
@@ -261,7 +264,7 @@ footer{
         align-items: center;
         background-color: $quaternary-color;
 
-        .footer__text__p{
+        .footer__paragraph{
             font-size: 1.3rem;
             color: $text-color;
         }

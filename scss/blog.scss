@@ -5,20 +5,22 @@ a{
     color: black;
 }
 
-header{
+.header{
     width: 100%;
     height: 120px;
     display: grid;
     grid-template-rows: 50px 70px;
     border-bottom: 1px solid $fifth-color;
+}
 
-    .header__icons-container{
+.header{
+    &__icons{
         width: 100%;
         height: 100%;
         display: grid;
         background-color: $primary-color;
 
-        .header__icons-container__icons{
+        .header__listIcons{
             width: 300px;
             height: auto;
             display: flex;
@@ -26,7 +28,7 @@ header{
             align-items: center;
             justify-content: space-around;
 
-            span{
+            .icon{
                 color: $text-color;
                 &:hover{
                     color: $fifth-color;
@@ -34,8 +36,10 @@ header{
             }
         }
     }
+}
 
-    .header__nav-container{
+.header{
+    &__nav{
         background-color: $text-color;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -44,9 +48,9 @@ header{
         box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.1);
 
 
-        .header__nav-container__logo{
-            a{
-                img{
+        .header__logo{
+            .logo{
+                .logo__image{
                     width: 150px;
                     height: 100%;
                     object-fit: contain;
@@ -54,12 +58,12 @@ header{
             }
         }
 
-        .header__nav-container__profile-link{
+        .header__profileLink{
             display: flex;
             justify-content: flex-end;
             margin-right: 50px;
 
-            a{
+            .header__linkProfile{
                 color: $primary-color;
                 font-family: "Rubik", sans-serif;
                 font-size: 1.5rem;
@@ -67,51 +71,61 @@ header{
                 border-bottom: 2px solid $primary-color;
                 cursor: pointer;
                 &:hover{
-                    transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
+                    transform: scale(1.05);
                 }
-            }  
+            }            
         }
     }
 }
 
-main{
+.main{
     /*Imagen*/
-    .main__blogpost-img-container{
+    &__imgContainer{
         padding: 40px 50px 40px;
         background-color: $primary-color;
-        // width: 80%;
 
-        img{
+        .imgContainer__img{
             width: 100%;
         }
     }
+}
+
+.main{
 
     /*parrafo del blog*/
-    .main__blogpost-main-container{
+    &__blogpost{
         padding: 0 50px 40px;
 
-        h3{
-            color: $primary-color;
-            font-size: 2rem;
-            border-bottom: 1px solid $primary-color;
-            margin: 20px 0;
-        }
+        .blogpost__content{
 
-        h1{
-            color: $primary-color;
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
+            .blogpost__h3{
+                color: $primary-color;
+                font-size: 2rem;
+                border-bottom: 1px solid $primary-color;
+                margin: 20px 0;
+            }
+            
+            .blogpost__article{
 
-        p{
-            color: $fifth-color;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+                .blogpost__title{
+                    color: $primary-color;
+                    font-size: 4rem;
+                    margin-bottom: 20px;
+                }
+        
+                .blogpost__paragraph{
+                    color: $fifth-color;
+                    font-size: 1.5rem;
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
+}
 
+.main{
     /*contacto*/
-    .main__contact-main-container{
+    &__contact{
         width: 100%;
         height: auto;
         display: grid;
@@ -120,24 +134,23 @@ main{
         grid-template-rows: 1fr;
         background-color: $primary-color;
         justify-content: center;
-        padding: 40px 30px 40px;
+        padding: 40px 50px 40px;
 
-        .main__contact-main-container__left{
+        .contact__message{
             display: flex;
             flex-wrap: wrap;
             justify-content: start;
             align-items: center;
 
-            img{
+            .contact__img{
                 width: 80px;
                 height: 80px;
                 margin-right: 10px;
             }
 
-            div{
-                // background-color: antiquewhite;
+            .contact__text{
 
-                a{
+                .profileLink{
                     font-size: 1.5rem;
                     color: $text-color;
                     margin-top: 10px;
@@ -150,7 +163,7 @@ main{
                     }
                 }
 
-                p{
+                .contact__paragraph{
                     font-size: 1.3rem;
                     margin: 10px 0;
                     color: $text-color;
@@ -158,18 +171,17 @@ main{
             }
         }
 
-        .main__contact-main-container__right{
-            @extend .main__contact-main-container__left;
+        .contact__social{
+            @extend .contact__message;
         }
     }
 }
 
-
-footer{
+.footer{
     width: 100%;
     height: auto;
 
-    .footer__text{
+    &__text{
         border-top: 35px solid $tertiary-color;
         width: 100%;
         height: 80px;
@@ -178,7 +190,7 @@ footer{
         align-items: center;
         background-color: $quaternary-color;
 
-        .footer__text__p{
+        .footer__paragraph{
             font-size: 1.3rem;
             color: $text-color;
         }

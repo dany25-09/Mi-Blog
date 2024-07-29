@@ -1,5 +1,5 @@
-main{
-    .main__principal-img-container{
+.main{
+    &__principalImg{
         justify-content: start;
         padding-top: 30px;
     }

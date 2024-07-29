@@ -5,20 +5,22 @@ a{
     color: black;
 }
 
-header{
+.header{
     width: 100%;
     height: 120px;
     display: grid;
     grid-template-rows: 50px 70px;
     border-bottom: 1px solid $fifth-color;
+}
 
-    .header__icons-container{
+.header{
+    &__icons{
         width: 100%;
         height: 100%;
         display: grid;
         background-color: $primary-color;
 
-        .header__icons-container__icons{
+        .header__listIcons{
             width: 300px;
             height: auto;
             display: flex;
@@ -26,7 +28,7 @@ header{
             align-items: center;
             justify-content: space-around;
 
-            span{
+            .icon{
                 color: $text-color;
                 &:hover{
                     color: $fifth-color;
@@ -34,19 +36,21 @@ header{
             }
         }
     }
+}
 
-    .header__nav-container{
+.header{
+    &__nav{
         background-color: $text-color;
         display: grid;
         grid-template-columns: 1fr 1fr;
         height: 100%;
         align-items: center;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.1);
 
 
-        .header__nav-container__logo{
-            a{
-                img{
+        .header__logo{
+            .logo{
+                .logo__image{
                     width: 150px;
                     height: 100%;
                     object-fit: contain;
@@ -54,12 +58,12 @@ header{
             }
         }
 
-        .header__nav-container__profile-link{
+        .header__profileLink{
             display: flex;
             justify-content: flex-end;
             margin-right: 50px;
 
-            a{
+            .header__linkProfile{
                 color: $primary-color;
                 font-family: "Rubik", sans-serif;
                 font-size: 1.5rem;
@@ -67,23 +71,22 @@ header{
                 border-bottom: 2px solid $primary-color;
                 cursor: pointer;
                 &:hover{
-                    transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
+                    transform: scale(1.05);
                 }
-            }  
+            }            
         }
     }
 }
 
-main{
-    // margin-bottom: 50px;
+.main{
     /*sección sobre mi*/
-    .main__about-me{
+    &__aboutMe{
         width: 100%;
         height: aut;
         background-color: #dfe3e9;
         box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
 
-        .main__about-me__info{
+        .aboutMe__info{
             display: grid;
             grid-template-columns: repeat(2, minmax(200px, 550px));
             grid-auto-rows: 300px;
@@ -92,13 +95,13 @@ main{
             justify-content: center;
             align-items: center;
 
-            .main__about-me__info__img{
+            .aboutMe__img{
 
-                .main__about-me__info__img__container{
+                .aboutMe__imgContainer{
                     display: grid;
                     width: 100%;
                     height: 100%;
-                    img{
+                    .imgContainer__img{
                         justify-self: center;
                         height: 300px;
                         object-fit: contain;
@@ -108,20 +111,20 @@ main{
                 }
             }
 
-            .main__about-me__info__text{
+            .aboutMe__text{
                 display: flex;
                 flex-direction: column;
                 align-items: start;
                 justify-content: center;
 
-                h1{
+                .aboutMe__title{
                     font-size: 2.5rem;
                     font-weight: 700;
                     color: $primary-color;
                     margin-bottom: 20px;
                 }
 
-                .main__about-me__info__text__p{
+                .aboutMe__paragraph{
                     font-size: 1.3rem;
                     font-weight: 600;
                     color: $primary-color;
@@ -130,12 +133,14 @@ main{
             }
         }
     }
+}
 
+.main{
     /*proyectos*/
-    .main__proyectos{
+    &__projects{
         margin-bottom: 50px;
         height: auto;
-        h2{
+        .projects__title{
             font-size: 2rem;
             font-weight: 700;
             color: $primary-color;
@@ -143,7 +148,7 @@ main{
             margin: 40px 0px;
         }
 
-        .main__proyectos__container{
+        .projects__articles{
             padding: 0 50px 0;
             display: flex;
             flex-wrap: wrap;
@@ -152,7 +157,7 @@ main{
             justify-content: center;
             gap: 20px;
 
-            .main__proyectos__container__articulo{
+            .article{
                 background-color: $primary-color;
                 max-width: 350px;
                 min-width: 280px;
@@ -160,13 +165,13 @@ main{
                 border-radius: 5px;
                 padding: 15px 15px;
 
-                h3{
+                .article__text{
                     color: $text-color;
                     font-size: 1.7rem;
                     margin-bottom: 10px;
                 }
 
-                p{
+                .article__info{
                     color: $text-color;
                     line-height: 15px;
                     font-size: 1.3rem;
@@ -175,9 +180,11 @@ main{
             }
         }
     }
+}
 
+.main{
     /*contacto*/
-    .main__contact-main-container{
+    &__contact{
         width: 100%;
         height: auto;
         display: grid;
@@ -188,22 +195,21 @@ main{
         justify-content: center;
         padding: 40px 50px 40px;
 
-        .main__contact-main-container__left{
+        .contact__message{
             display: flex;
             flex-wrap: wrap;
             justify-content: start;
             align-items: center;
 
-            img{
+            .contact__img{
                 width: 80px;
                 height: 80px;
                 margin-right: 10px;
             }
 
-            div{
-                // background-color: antiquewhite;
+            .contact__text{
 
-                a{
+                .profileLink{
                     font-size: 1.5rem;
                     color: $text-color;
                     margin-top: 10px;
@@ -216,7 +222,7 @@ main{
                     }
                 }
 
-                p{
+                .contact__paragraph{
                     font-size: 1.3rem;
                     margin: 10px 0;
                     color: $text-color;
@@ -224,17 +230,17 @@ main{
             }
         }
 
-        .main__contact-main-container__right{
-            @extend .main__contact-main-container__left;
+        .contact__social{
+            @extend .contact__message;
         }
     }
 }
 
-footer{
+.footer{
     width: 100%;
     height: auto;
 
-    .footer__text{
+    &__text{
         border-top: 35px solid $tertiary-color;
         width: 100%;
         height: 80px;
@@ -243,7 +249,7 @@ footer{
         align-items: center;
         background-color: $quaternary-color;
 
-        .footer__text__p{
+        .footer__paragraph{
             font-size: 1.3rem;
             color: $text-color;
         }

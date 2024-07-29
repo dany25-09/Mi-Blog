@@ -15,20 +15,21 @@ a {
   color: black;
 }
 
-header {
+.header {
   width: 100%;
   height: 120px;
   display: grid;
   grid-template-rows: 50px 70px;
   border-bottom: 1px solid #473550;
 }
-header .header__icons-container {
+
+.header__icons {
   width: 100%;
   height: 100%;
   display: grid;
   background-color: #9523CF;
 }
-header .header__icons-container .header__icons-container__icons {
+.header__icons .header__listIcons {
   width: 300px;
   height: auto;
   display: flex;
@@ -36,13 +37,14 @@ header .header__icons-container .header__icons-container__icons {
   align-items: center;
   justify-content: space-around;
 }
-header .header__icons-container .header__icons-container__icons span {
+.header__icons .header__listIcons .icon {
   color: white;
 }
-header .header__icons-container .header__icons-container__icons span:hover {
+.header__icons .header__listIcons .icon:hover {
   color: #473550;
 }
-header .header__nav-container {
+
+.header__nav {
   background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -50,49 +52,47 @@ header .header__nav-container {
   align-items: center;
   box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.1);
 }
-header .header__nav-container .header__nav-container__logo a img {
+.header__nav .header__logo .logo .logo__image {
   width: 150px;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-header .header__nav-container .header__nav-container__profile-link {
+.header__nav .header__profileLink {
   display: flex;
   justify-content: flex-end;
   margin-right: 50px;
 }
-header .header__nav-container .header__nav-container__profile-link a {
+.header__nav .header__profileLink .header__linkProfile {
   color: #9523CF;
   font-family: "Rubik", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   border-bottom: 2px solid #9523CF;
-  display: inline-block;
-  transition: transform 0.3s;
+  cursor: pointer;
 }
-header .header__nav-container .header__nav-container__profile-link a:hover {
-  transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
+.header__nav .header__profileLink .header__linkProfile:hover {
+  transform: scale(1.05);
 }
 
-main {
+.main {
   /*sección noticias*/
-  /*Últimos blogposts*/
 }
-main .main__noticias {
+.main__news {
   width: 100%;
   height: auto;
   padding-bottom: 10px;
   background-color: #473550;
   box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
 }
-main .main__noticias .main__noticias__h2 {
+.main__news .news__title {
   display: inline-block;
   font-size: 2rem;
   font-weight: 500;
   color: white;
   margin: 30px 50px;
 }
-main .main__noticias .main__noticias__info {
+.main__news .news__article {
   display: grid;
   padding: 0 40px;
   grid-template-columns: repeat(2, minmax(300px, 500px));
@@ -100,31 +100,31 @@ main .main__noticias .main__noticias__info {
   gap: 30px;
   justify-content: center;
 }
-main .main__noticias .main__noticias__info .main__noticias__info__img .main__noticias__info__img__container {
+.main__news .news__article .article__infoImg .infoImg__container {
   width: 100%;
   height: 100%;
 }
-main .main__noticias .main__noticias__info .main__noticias__info__img .main__noticias__info__img__container img {
+.main__news .news__article .article__infoImg .infoImg__container .infoImg__image {
   width: 90%;
   border-radius: 10px;
 }
-main .main__noticias .main__noticias__info .main__noticias__info__text {
+.main__news .news__article .article__infoText {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
 }
-main .main__noticias .main__noticias__info .main__noticias__info__text h1 {
+.main__news .news__article .article__infoText .article__title {
   font-size: 2rem;
   color: white;
   margin-bottom: 20px;
 }
-main .main__noticias .main__noticias__info .main__noticias__info__text .main__noticias__info__text__p {
+.main__news .news__article .article__infoText .article__paragraph {
   font-size: 1.3rem;
   color: white;
   margin-bottom: 30px;
 }
-main .main__noticias .main__noticias__info .main__noticias__info__text .main__noticias__info__text__a {
+.main__news .news__article .article__infoText .blogProfile {
   width: 90px;
   height: 35px;
   padding: 10px;
@@ -139,18 +139,22 @@ main .main__noticias .main__noticias__info .main__noticias__info__text .main__no
   display: inline-block;
   transition: transform 0.3s;
 }
-main .main__noticias .main__noticias__info .main__noticias__info__text .main__noticias__info__text__a:hover {
+.main__news .news__article .article__infoText .blogProfile:hover {
   background-color: #663D7A;
   transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
 }
-main .main__ultimos-blogs .main__ultimos-blogs__h2 {
+
+.main {
+  /*Últimos blogposts*/
+}
+.main__latestBlogs .latestBlogs__title {
   font-size: 2rem;
   font-weight: 700;
   color: #9523CF;
   text-align: center;
   margin: 20px 0px;
 }
-main .main__ultimos-blogs .main__ultimos-blogs__container {
+.main__latestBlogs .latestBlogs__container {
   margin: 0 auto;
   margin-bottom: 70px;
   width: 80%;
@@ -161,7 +165,7 @@ main .main__ultimos-blogs .main__ultimos-blogs__container {
   align-items: center;
   gap: 30px;
 }
-main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog {
+.main__latestBlogs .latestBlogs__container .article {
   min-width: 280px; /*para que funcione el overflow-x*/
   width: 280px;
   height: 380px;
@@ -171,27 +175,27 @@ main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
   /*Otras imagenes*/
 }
-main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--sixth, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--fifth, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--quaternary, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--tertiary, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--secondary {
+.main__latestBlogs .latestBlogs__container .article .article__imgContainer--first, .main__latestBlogs .latestBlogs__container .article .article__imgContainer--sixth, .main__latestBlogs .latestBlogs__container .article .article__imgContainer--fifth, .main__latestBlogs .latestBlogs__container .article .article__imgContainer--fourth, .main__latestBlogs .latestBlogs__container .article .article__imgContainer--third, .main__latestBlogs .latestBlogs__container .article .article__imgContainer--second {
   width: 100%;
   height: 45%;
 }
-main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img img, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--sixth img, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--fifth img, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--quaternary img, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--tertiary img, main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__img--secondary img {
+.main__latestBlogs .latestBlogs__container .article .article__imgContainer--first .article__img, .main__latestBlogs .latestBlogs__container .article .article__imgContainer--sixth .article__img, .main__latestBlogs .latestBlogs__container .article .article__imgContainer--fifth .article__img, .main__latestBlogs .latestBlogs__container .article .article__imgContainer--fourth .article__img, .main__latestBlogs .latestBlogs__container .article .article__imgContainer--third .article__img, .main__latestBlogs .latestBlogs__container .article .article__imgContainer--second .article__img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__h2 {
+.main__latestBlogs .latestBlogs__container .article .article__title {
   color: white;
   margin: 20px 10px;
   font-size: 1.8rem;
 }
-main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__p {
+.main__latestBlogs .latestBlogs__container .article .article__paragraph {
   color: white;
   font-size: 1.2rem;
   margin: 0px 10px;
   margin-bottom: 30px;
 }
-main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__a {
+.main__latestBlogs .latestBlogs__container .article .blogProfile {
   width: 90px;
   height: 35px;
   padding: 10px;
@@ -205,15 +209,15 @@ main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__
   color: white;
   cursor: pointer;
 }
-main .main__ultimos-blogs .main__ultimos-blogs__container .main__ultimos-blogs__container__blog .main__ultimos-blogs__container__blog__a:hover {
+.main__latestBlogs .latestBlogs__container .article .blogProfile:hover {
   background-color: #9523CF;
   transform: scale(1.05); /* Escala el elemento al 105% de su tamaño original al pasar el cursor */
 }
-footer {
+.footer {
   width: 100%;
   height: auto;
 }
-footer .footer__text {
+.footer__text {
   border-top: 35px solid #8037A5;
   width: 100%;
   height: 80px;
@@ -222,7 +226,7 @@ footer .footer__text {
   align-items: center;
   background-color: #663D7A;
 }
-footer .footer__text .footer__text__p {
+.footer__text .footer__paragraph {
   font-size: 1.3rem;
   color: white;
 }/*# sourceMappingURL=blogs.css.map */
